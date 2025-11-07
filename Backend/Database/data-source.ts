@@ -1,7 +1,5 @@
 import 'reflect-metadata';
 import dotenv from 'dotenv';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import { DataSource } from 'typeorm';
 import { User } from '../User/Entity';
 
