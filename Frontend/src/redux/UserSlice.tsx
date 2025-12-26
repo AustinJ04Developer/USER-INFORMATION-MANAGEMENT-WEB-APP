@@ -27,7 +27,7 @@ const initialState: UserState = {
   error: null,
 };
 
-const API_URL = 'http://localhost:5000/api/users';
+const API_URL = 'https://user-information-management-web-app.onrender.com/api/users';
 
 // ========== FETCH ALL USERS ==========
 export const fetchUsers = createAsyncThunk<User[], void, { rejectValue: string }>(
