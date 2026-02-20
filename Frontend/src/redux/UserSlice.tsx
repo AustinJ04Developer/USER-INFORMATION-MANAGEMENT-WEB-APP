@@ -27,7 +27,9 @@ const initialState: UserState = {
   error: null,
 };
 
-const API_URL = 'https://user-information-management-web-app.onrender.com/api/users';
+// Use environment variable for API_URL, fallback to localhost for development
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = `${API_BASE}/users`;
 
 // ========== FETCH ALL USERS ==========
 export const fetchUsers = createAsyncThunk<User[], void, { rejectValue: string }>(

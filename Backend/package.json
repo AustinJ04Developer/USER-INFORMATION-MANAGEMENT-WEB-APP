@@ -4,10 +4,10 @@
   "description": "This is an User Information management task website.",
   "license": "ISC",
   "author": "Austin J",
-  "type": "module",
+  "type": "commonjs",
   "main": "server.ts",
   "scripts": {
-    "server": "tsx watch ./server.ts"
+    "server": "nodemon --exec ts-node -r tsconfig-paths/register server.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
@@ -16,7 +16,8 @@
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
-    "tsx": "^4.20.5"
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -24,6 +25,7 @@
     "express": "^5.1.0",
     "mysql2": "^3.15.0",
     "reflect-metadata": "^0.2.2",
+    "tsconfig-paths": "^4.2.0",
     "typeorm": "^0.3.27"
   }
 }

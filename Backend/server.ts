@@ -1,6 +1,10 @@
 import 'reflect-metadata';
 import dotenv from 'dotenv';
-dotenv.config({ path: './Config.env' }); 
+// Load environment variables from .env or Config.env
+dotenv.config({ path: './.env' });
+if (!process.env.PORT) {
+  dotenv.config({ path: './Config.env' });
+}
 import app from './index';
 
 const PORT = process.env.PORT || 5000;
